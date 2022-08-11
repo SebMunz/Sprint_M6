@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi proyecto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <script th:src="@{/js/menuSinLogin.js}"></script>
+    <script src="https://kit.fontawesome.com/81a2ed02b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <header>
+        <div class="logo">
+            <h1>
+                <a th:href="@{/inicio}">
+                    <i class="fas fa-cubes fa-1x me-3" style="color: #ff6219;"></i>
+                    <!-- <img class="logo-movil" src="img/Logo-Estudio-Romy-3.png" alt="">-->
+                </a>
+            </h1>
+        </div>
+        <div th:replace="navSinLogin :: navegaSinLogin"></div>
+    </header>
+    <section class="carrusel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://hablemosdeempresas.com/wp-content/uploads/sites/2/2020/05/cursos-riesgos-laborales-min-1100x733.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://at3w.com/wp-content/uploads/2022/04/seguridad-trabajo_Portada_750x461_ES.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://nelsonmedel.cl/fullStackJava/prevensionista.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section class="seccion-inicio">
+        <h2>Bienvenido al sistema de información de <br>Prevensión de riesgos</h2>
+        <h3>Inicia sesión para acceder a las funcionalidades.</h3>
+        <a th:href="@{/login}" class="btn btn-primary customPrimary">Iniciar Sesión</a>
+    </section>
+
+    <section class="seccion-noticias" id="seccion-noticia">
+        <h2 style="text-align:center;">Sección Noticias</h2>
+        <br>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h3>Título Noticia</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim mauris tortor,
+                    non imperdiet quam interdum tincidunt. Suspendisse nec tellus turpis. Vivamus mauris sem,
+                    laoreet sed gravida sed, elementum vitae arcu. Etiam sapien lorem, rhoncus in gravida in,
+                    finibus mattis purus. Curabitur lacinia elementum tortor in tristique. Cras id libero pretium,
+                    mollis arcu nec, fermentum ante. Pellentesque elementum in massa eget luctus.
+                    Donec vulputate urna at odio ultrices, in imperdiet sapien hendrerit. Mauris mattis felis nec porta tempor.
+                    Maecenas et fermentum diam. Sed ullamcorper at ipsum a porta.</p>
+                <p>Cras ante turpis, tincidunt quis lacus ut, euismod posuere sem. In laoreet orci eget est feugiat,
+                    eu semper augue facilisis. Aliquam feugiat rutrum sem nec pharetra. Quisque aliquet dui sapien,
+                    in elementum massa mollis id. Fusce id dignissim arcu. Sed sagittis sollicitudin mollis.
+                    Curabitur egestas orci ut aliquet convallis. Sed volutpat, turpis quis congue varius, urna augue
+                    eleifend libero, id aliquet sem tortor in lectus.
+                </p>
+
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="cont-img-noticia"><img src="https://hablemosdeempresas.com/wp-content/uploads/sites/2/2020/05/cursos-riesgos-laborales-min-1100x733.jpeg" alt=""></div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+            integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+            integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+            crossorigin="anonymous"></script>
+</body>
+</html>

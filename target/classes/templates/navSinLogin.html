@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="nav" th:fragment="navegaSinLogin">
+
+    <div class="menu-boton"><a href="javascript:void(0)" id="mostrar-menu" role="button" onclick="openNav()"><i class="fas fa-2x fa-bars"></i></a></div>
+    <div id="menu" class="contenedor-menu">
+        <div class="header-menu"><span><a href="javascript:void(0)" id="ocultar-menu" role="button" onclick="closeNav()"><i class="fas fa-times fa-2x"></i></a></span></div>
+
+        <div class="body-menu">
+            <li><a th:href="@{/inicio}" class="cero" id="cero" role="button" onclick="closeNav()">Home</a></li>
+            <li><a th:href="@{/login}" class="uno" id="uno" role="button" onclick="closeNav()">Iniciar Sesión</a></li>
+            <li><a href="#seccion-noticia" class="dos" id="dos" role="button" onclick="closeNav()">Noticias</a></li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/contacto}">Entrar sin logeo</a>
+            </li>
+        </div>
+    </div>
+</div>
+</body>
+</html>

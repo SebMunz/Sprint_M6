@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi proyecto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div th:replace="nav :: navega"></div>
+    </header>
+    <main class="container">
+        <h2 class="titulo-pagina-h2">Contacto</h2>
+
+        <div class="row">
+            <div clas="col">
+                <form>
+                    <div class="lineaFormulario">
+                        <label for="nombre">Nombre:</label>
+                        <input name="nombre" id="nombre" type="text" class="form-control">
+                    </div>
+                    <div class="formulario">
+                        <label for="email" class="form-label">Correo:</label>
+                        <input name="email" id="email" type="email" class="form-control"
+                               placeholder="nombre@ejemplo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje:</label>
+                        <textarea name="mensaje" id="mensaje" class="form-control" rows="3"></textarea>
+                    </div>
+                    <button type="button" class="col btn btn-primary" onclick="">Enviar</button>
+                    <button class="btn btn-secondary" type="reset">Borrar</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+            integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+            integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+            crossorigin="anonymous"></script>
+</body>
+</html>
