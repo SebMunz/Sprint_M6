@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi proyecto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div th:replace="nav :: navega"></div>
+    </header>
+    <main class="container">
+        <h2 class="titulo-pagina-h2">Listado de Check Items</h2>
+
+        <div class="row m-3">
+            <div class="col-md-3"><a th:href="@{/check/nuevoCheck}" class="btn btn-primary">Ingresar Check Item</a> </div>
+        </div>
+
+        <table class="table" id="usuarios">
+            <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Descripcion</th>
+                <th>Estado</th>
+                <th>Acción</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="check:${checks}">
+                    <td th:text="${check.getCheckId()}">1</td>
+                    <td th:text="${check.getDescription()}">15156456</td>
+                    <td th:text="${check.getStatusCheck()}">Lunes</td>
+
+                    <td>
+                        <a th:href="@{/check/{id}(id=${check.getCheckId()})}">Editar</a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="row checkItems">
+            <div class="col-12">
+                <div th:each="check:${checks}">
+                    <input type="checkbox" name="description" id="description" th:checked="${check.getStatusCheck()}" />
+                    <label th:text="${check.description}" for="description"></label>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+            integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+            integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+            crossorigin="anonymous"></script>
+
+    <!-- Jquery, datTable css, dataTable js -->
+    <script	src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"
+          rel="stylesheet" />
+
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <script>
+		$(document).ready( function () {
+		    $('#usuarios').DataTable();
+		} );
+	</script>
+</body>
+</html>

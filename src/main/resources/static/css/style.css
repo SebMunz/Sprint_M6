@@ -1,0 +1,184 @@
+
+.escondido{
+	display:none;
+}
+.container-fluid{
+	padding-left:0;
+	padding-right:0;
+}
+
+header{
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+.logo{
+	padding-top:20px;
+	padding-left:20px;
+}
+.logo-movil{
+	width:200px;
+	left:10px;
+	position:absolute;
+	top:-30px;
+
+}
+#carouselExampleIndicators{
+	height:400px;
+	overflow:hidden;
+	z-index:0;
+}
+
+#menu{
+
+	height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: rgba(250,250,250,0.8); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+#menu span{
+	position:absolute;
+	top:6px;
+	right:10px;
+}
+#menu span i{
+	color:#17706E;
+}
+.navbar{
+	padding-left:15px;
+	padding-right:15px;
+	background:#17706E;
+}
+.navbar a{
+	color:#fff;
+}
+.dropdown-menu{
+	background:#17706E;
+}
+.dropdown-item{
+	background:#17706E;
+}
+.navbar button{
+	color:#fff;
+	background:#fff;
+	border:none;
+}
+
+.body-menu > li{
+	list-style:none;
+}
+.body-menu a {
+    padding:10px 10px 10px 20px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #17706E;
+    display: block;
+    transition: 0.5s;
+	width:360px;
+	text-align:center;
+}
+.body-menu a:hover{
+	font-size: 32px;
+	background:rgba(250,250,250,0.9);
+}
+.menu-boton{
+	width:32px;
+	height:32px;
+	position:fixed;
+	top:10px;
+	right:0;
+}
+.menu-boton a{
+	color:#fff;
+	font-size:12px;
+}
+
+.seccion-inicio{
+	width:60%;
+	position:relative;
+	top:-400px;
+	background:rgba(250,250,250,0.6);
+	padding:20px;
+	margin:0 auto;
+	display:block;
+	border-radius:10px;
+}
+.seccion-inicio h2{
+	text-align:center;
+	margin-bottom:30px;
+	color:#17706E;
+}
+.seccion-inicio h3{
+	text-align:center;
+}
+.customPrimary{
+	display:block;
+	margin:0 auto;
+	width:300px;
+	background:#17706E;
+	border:none;
+}
+.customPrimary:hover{
+	background:#ffffff;
+	color:#17706E;
+	border:solid 1px #17706E;
+}
+
+.cont-img-noticia{
+	width:100%;
+	overflow:hidden;
+}
+.cont-img-noticia img{
+	width:100%;
+}
+
+.contenedor-tabla-inicio{
+	width:100%;
+}
+.titulo-pagina-h2{
+	margin-top:70px;
+}
+.seccion-noticias{
+	position:relative;
+	top:-250px;
+	padding-left:15px;
+	padding-right:15px;
+}
+footer{
+
+}
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+
+	#carouselExampleIndicators{
+		height:600px;
+		overflow:hidden;
+	}
+	.seccion-noticias{
+		top:-150px;
+	}
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	/* Home */
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
